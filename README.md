@@ -1,2 +1,12 @@
-# valortrust.consultant
-a famous website that i have created the most
+---
+title: vtsc
+emoji: 🐳
+colorFrom: yellow
+colorTo: blue
+sdk: static
+pinned: false
+tags:
+  - deepsite
+---
+
+Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference

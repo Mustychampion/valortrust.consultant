@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALORTRUST SOLUTION AND CONSULTANT | Kano, Nigeria</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+        
+        :root {
+            --primary: #0047AB;
+            --secondary: #FFD700;
+            --light: #F8F9FA;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(0, 71, 171, 0.85), rgba(0, 71, 171, 0.9)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        
+        .animate-slogan {
+            animation: slideIn 1.5s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .custom-shape-divider-bottom-1690490872 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+        
+        .custom-shape-divider-bottom-1690490872 svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 150px;
+        }
+        
+        .custom-shape-divider-bottom-1690490872 .shape-fill {
+            fill: #FFFFFF;
+        }
+        
+        .marquee {
+            animation: scroll 20s linear infinite;
+        }
+        
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-100% - 1rem));
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/2348039535043" class="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+    
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-md z-40 transition-all duration-500">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#" class="text-2xl font-bold text-blue-900 flex items-center">
+                    <span class="bg-blue-900 text-white p-2 rounded mr-2">VTC</span>
+                    <span>VALORTRUST</span>
+                </a>
+            </div>
+            
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#" class="text-blue-900 font-medium hover:text-yellow-500 transition">Home</a>
+                <a href="#about" class="text-blue-900 font-medium hover:text-yellow-500 transition">About</a>
+                <a href="#services" class="text-blue-900 font-medium hover:text-yellow-500 transition">Services</a>
+                <a href="#portfolio" class="text-blue-900 font-medium hover:text-yellow-500 transition">Portfolio</a>
+                <a href="#blog" class="text-blue-900 font-medium hover:text-yellow-500 transition">Blog</a>
+                <a href="#contact" class="text-blue-900 font-medium hover:text-yellow-500 transition">Contact</a>
+                <a href="#contact" class="bg-blue-900 text-white px-6 py-2 rounded-lg hover:bg-yellow-500 transition">Get Started</a>
+            </div>
+            
+            <button id="menu-toggle" class="md:hidden text-blue-900">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
+            <a href="#" class="block py-2 text-blue-900 font-medium hover:text-yellow-500 transition">Home</a>
+            <a href="#about" class="block py-2 text-blue-900 font-medium hover:text-yellow-500 transition">About</a>
+            <a href="#services" class="block py-2 text-blue-900 font-medium hover:text-yellow-500 transition">Services</a>
+            <a href="#portfolio" class="block py-2 text-blue-900 font-medium hover:text-yellow-500 transition">Portfolio</a>
+            <a href="#blog" class="block py-2 text-blue-900 font-medium hover:text-yellow-500 transition">Blog</a>
+            <a href="#contact" class="block py-2 text-blue-900 font-medium hover:text-yellow-500 transition">Contact</a>
+            <a href="#contact" class="block mt-2 bg-blue-900 text-white px-6 py-2 rounded-lg hover:bg-yellow-500 transition text-center">Get Started</a>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero-bg text-white pt-32 pb-40 relative">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-slogan">Empowering Brands and Building Dreams with Innovative Solutions</h1>
+                <p class="text-xl mb-8 opacity-90">Your trusted partner in digital transformation and construction excellence in Kano, Nigeria.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-3 px-8 rounded-lg transition transform hover:scale-105">Start Your Project Today</a>
+                    <a href="#services" class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 font-bold py-3 px-8 rounded-lg transition transform hover:scale-105">Our Services</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="w-80 h-80 md:w-96 md:h-96 bg-blue-800 rounded-full opacity-20 absolute -left-10 -top-10 animate-pulse"></div>
+                    <div class="w-80 h-80 md:w-96 md:h-96 bg-yellow-500 rounded-full opacity-20 absolute -right-10 -bottom-10 animate-pulse delay-500"></div>
+                    <img src="https://images.unsplash.com/photo-1560264280-88b68371db39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80" alt="Business Team" class="relative z-10 rounded-2xl shadow-2xl w-full max-w-md">
+                </div>
+            </div>
+        </div>
+        
+        <div class="custom-shape-divider-bottom-1690490872">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+    
+    <!-- Trusted By Section -->
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h3 class="text-center text-gray-500 mb-8 font-medium">TRUSTED BY BRANDS ACROSS NIGERIA</h3>
+            <div class="flex overflow-x-hidden">
+                <div class="flex space-x-16 px-4 marquee items-center">
+                    <img src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg" alt="Transistor" class="h-12 opacity-60 hover:opacity-100 transition">
+                    <img src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg" alt="Reform" class="h-12 opacity-60 hover:opacity-100 transition">
+                    <img src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg" alt="Tuple" class="h-12 opacity-60 hover:opacity-100 transition">
+                    <img src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg" alt="SavvyCal" class="h-12 opacity-60 hover:opacity-100 transition">
+                    <img src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg" alt="Statamic" class="h-12 opacity-60 hover:opacity-100 transition">
+                    <img src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg" alt="Transistor" class="h-12 opacity-60 hover:opacity-100 transition">
+                    <img src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg" alt="Reform" class="h-12 opacity-60 hover:opacity-100 transition">
+                    <img src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg" alt="Tuple" class="h-12 opacity-60 hover:opacity-100 transition">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">About ValorTrust</h2>
+                <div class="w-24 h-1 bg-yellow-500 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Team Meeting" class="rounded-2xl shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-6">Our Story</h3>
+                    <p class="text-gray-600 mb-6">Founded in Kano, Nigeria, ValorTrust Solution and Consultant has been at the forefront of delivering innovative solutions that bridge the gap between digital transformation and construction excellence.</p>
+                    
+                    <h3 class="text-2xl font-bold text-blue-900 mb-6 mt-10">Meet the Founder</h3>
+                    <p class="text-gray-600 mb-6">"A dedicated strategist and visionary from Zangon Bare Bari Quarter, Kano. I specialize in digital marketing, social media growth, branding, quantity surveying, real estate management, and construction project consulting. I'm studying Quantity Surveying at Bayero University Kano and help businesses scale through smart, creative systems."</p>
+                    <p class="font-medium">— Mustapha Sani Jibril</p>
+                </div>
+            </div>
+            
+            <!-- Our Values -->
+            <div class="mt-20">
+                <h3 class="text-2xl font-bold text-blue-900 mb-10 text-center">Our Core Values</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition text-center border-t-4 border-blue-900">
+                        <div class="text-blue-900 text-4xl mb-4"><i class="fas fa-shield-alt"></i></div>
+                        <h4 class="text-xl font-bold mb-2">Integrity</h4>
+                        <p class="text-gray-600">We uphold the highest standards of honesty and ethical practices in all our interactions.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition text-center border-t-4 border-blue-900">
+                        <div class="text-blue-900 text-4xl mb-4"><i class="fas fa-lightbulb"></i></div>
+                        <h4 class="text-xl font-bold mb-2">Innovation</h4>
+                        <p class="text-gray-600">We constantly seek creative solutions to meet our clients' evolving needs with cutting-edge approaches.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition text-center border-t-4 border-blue-900">
+                        <div class="text-blue-900 text-4xl mb-4"><i class="fas fa-star"></i></div>
+                        <h4 class="text-xl font-bold mb-2">Excellence</h4>
+                        <p class="text-gray-600">We commit to delivering superior quality in every project, setting benchmarks in our industry.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition text-center border-t-4 border-blue-900">
+                        <div class="text-blue-900 text-4xl mb-4"><i class="fas fa-handshake"></i></div>
+                        <h4 class="text-xl font-bold mb-2">Partnership</h4>
+                        <p class="text-gray-600">We believe in collaborative relationships that foster mutual growth and long-term success.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Our Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Comprehensive solutions tailored to your business needs</p>
+                <div class="w-24 h-1 bg-yellow-500 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-500">
+                    <div class="h-48 bg-blue-900 flex items-center justify-center">
+                        <i class="fas fa-hashtag text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-2">Social Media Management</h3>
+                        <p class="text-gray-600 mb-4">Grow your online presence with strategic content and engagement that converts followers to customers.</p>
+                        <a href="#contact" class="text-yellow-500 font-medium hover:text-yellow-600 transition">Learn More →</a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-500">
+                    <div class="h-48 bg-blue-900 flex items-center justify-center">
+                        <i class="fas fa-palette text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-2">Business Branding</h3>
+                        <p class="text-gray-600 mb-4">Create a powerful brand identity that resonates with your target audience and stands out in the market.</p>
+                        <a href="#contact" class="text-yellow-500 font-medium hover:text-yellow-600 transition">Learn More →</a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-500">
+                    <div class="h-48 bg-blue-900 flex items-center justify-center">
+                        <i class="fas fa-chess text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-2">Product Strategy</h3>
+                        <p class="text-gray-600 mb-4">Develop winning product strategies for kitchenware, retail, and consumer goods that drive sales.</p>
+                        <a href="#contact" class="text-yellow-500 font-medium hover:text-yellow-600 transition">Learn More →</a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-500">
+                    <div class="h-48 bg-blue-900 flex items-center justify-center">
+                        <i class="fas fa-cube text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-2">3D Object Design</h3>
+                        <p class="text-gray-600 mb-4">Bring your product ideas to life with stunning 3D designs for tea flasks, warmers, and more.</p>
+                        <a href="#contact" class="text-yellow-500 font-medium hover:text-yellow-600 transition">Learn More →</a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 5 -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-500">
+                    <div class="h-48 bg-blue-900 flex items-center justify-center">
+                        <i class="fas fa-chart-line text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-2">Small Business Consulting</h3>
+                        <p class="text-gray-600 mb-4">Scale your business with expert guidance on operations, marketing, and growth strategies.</p>
+                        <a href="#contact" class="text-yellow-500 font-medium hover:text-yellow-600 transition">Learn More →</a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 6 -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-500">
+                    <div class="h-48 bg-blue-900 flex items-center justify-center">
+                        <i class="fas fa-bullhorn text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-2">Marketing Campaigns</h3>
+                        <p class="text-gray-600 mb-4">Launch data-driven marketing campaigns that generate leads and boost your revenue.</p>
+                        <a href="#contact" class="text-yellow-500 font-medium hover:text-yellow-600 transition">Learn More →</a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 7 -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-500">
+                    <div class="h-48 bg-blue-900 flex items-center justify-center">
+                        <i class="fas fa-building text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-2">Building Construction</h3>
+                        <p class="text-gray-600 mb-4">Professional construction services from planning to execution with quality craftsmanship.</p>
+                        <a href="#contact" class="text-yellow-500 font-medium hover:text-yellow-600 transition">Learn More →</a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 8 -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-500">
+                    <div class="h-48 bg-blue-900 flex items-center justify-center">
+                        <i class="fas fa-home text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-2">Real Estate Management</h3>
+                        <p class="text-gray-600 mb-4">Maximize your property investments with our comprehensive management solutions.</p>
+                        <a href="#contact" class="text-yellow-500 font-medium hover:text-yellow-600 transition">Learn More →</a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 9 -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-500">
+                    <div class="h-48 bg-blue-900 flex items-center justify-center">
+                        <i class="fas fa-calculator text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-900 mb-2">Quantity Surveying</h3>
+                        <p class="text-gray-600 mb-4">Accurate cost estimation and project budgeting to keep your construction projects on track.</p>
+                        <a href="#contact" class="text-yellow-500 font-medium hover:text-yellow-600 transition">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <a href="#contact" class="bg-blue-900 hover:bg-blue-800 text-white font-bold py-4 px-8 rounded-lg transition transform hover:scale-105 inline-block">Get a Free Consultation</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Our Portfolio</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">See our work in action across different industries</p>
+                <div class="w-24 h-1 bg-yellow-500 mx-auto mt-4"></div>
+            </div>
+            
+            <!-- Portfolio Filter -->
+            <div class="flex justify-center mb-12">
+                <div class="inline-flex rounded-md shadow-sm" role="group">
+                    <button type="button" class="portfolio-filter px-6 py-3 text-sm font-medium text-blue-900 bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-blue-900 focus:text-blue-900" data-filter="all">
+                        All Work
+                    </button>
+                    <button type="button" class="portfolio-filter px-6 py-3 text-sm font-medium text-blue-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-blue-900 focus:text-blue-900" data-filter="digital">
+                        Digital
+                    </button>
+                    <button type="button" class="portfolio-filter px-6 py-3 text-sm font-medium text-blue-900 bg-white border border-gray-200 hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-blue-900 focus:text-blue-900" data-filter="design">
+                        Design
+                    </button>
+                    <button type="button" class="portfolio-filter px-6 py-3 text-sm font-medium text-blue-900 bg-white border border-gray-200 hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-blue-900 focus:text-blue-900" data-filter="construction">
+                        Construction
+                    </button>
+                    <button type="button" class="portfolio-filter px-6 py-3 text-sm font-medium text-blue-900 bg-white border border-gray-200 rounded-r-lg hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-blue-900 focus:text-blue-900" data-filter="real-estate">
+                        Real Estate
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Portfolio Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-category="digital">
+                    <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Social Media Growth" class="w-full h-64 object-cover">
+                    <div class="portfolio-overlay absolute inset-0 bg-blue-900 bg-opacity-90 flex flex-col justify-center items-center text-white opacity-0 transition-opacity duration-300 p-6">
+                        <h3 class="text-xl font-bold mb-2">Social Media Growth</h3>
+                        <p class="text-center mb-4">Increased followers by 300% in 3 months for this retail brand through targeted content strategy.</p>
+                        <span class="text-yellow-500 font-medium">See Case Study →</span>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-category="design">
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80" alt="3D Product Design" class="w-full h-64 object-cover">
+                    <div class="portfolio-overlay absolute inset-0 bg-blue-900 bg-opacity-90 flex flex-col justify-center items-center text-white opacity-0 transition-opacity duration-300 p-6">
+                        <h3 class="text-xl font-bold mb-2">3D Product Design</h3>
+                        <p class="text-center mb-4">Created functional and aesthetic designs for kitchenware products that boosted manufacturer sales.</p>
+                        <span class="text-yellow-500 font-medium">View Project →</span>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-category="digital">
+                    <img src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Brand Identity" class="w-full h-64 object-cover">
+                    <div class="portfolio-overlay absolute inset-0 bg-blue-900 bg-opacity-90 flex flex-col justify-center items-center text-white opacity-0 transition-opacity duration-300 p-6">
+                        <h3 class="text-xl font-bold mb-2">Brand Identity</h3>
+                        <p class="text-center mb-4">Complete rebranding for a local business that transformed their market perception and customer engagement.</p>
+                        <span class="text-yellow-500 font-medium">See Before & After →</span>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-category="construction">
+                    <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Residential Project" class="w-full h-64 object-cover">
+                    <div class="portfolio-overlay absolute inset-0 bg-blue-900 bg-opacity-90 flex flex-col justify-center items-center text-white opacity-0 transition-opacity duration-300 p-6">
+                        <h3 class="text-xl font-bold mb-2">Residential Project</h3>
+                        <p class="text-center mb-4">Completed 5-unit residential building in Kano with cost-effective solutions and quality materials.</p>
+                        <span class="text-yellow-500 font-medium">View Gallery →</span>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-item relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-category="real-estate">
+                    <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Property Management" class="w-full h-64 object-cover">
+                    <div class="portfolio-overlay absolute inset-0 bg-blue-900 bg-opacity-90 flex flex-col justify-center items-center text-white opacity-0 transition-opacity duration-300 p-6">
+                        <h3 class="text-xl font-bold mb-2">Property Management</h3>
+                        <p class="text-center mb-4">Streamlined operations and increased rental income by 25% for this commercial property portfolio.</p>
+                        <span class="text-yellow-500 font-medium">Learn How →</span>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-item relative overflow-hidden rounded-lg shadow-lg cursor-pointer" data-category="design">
+                    <img src="https://images.unsplash.com/photo-1618004912476-29818d81ae2e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80" alt="Product Packaging" class="w-full h-64 object-cover">
+                    <div class="portfolio-overlay absolute inset-0 bg-blue-900 bg-opacity-90 flex flex-col justify-center items-center text-white opacity-0 transition-opacity duration-300 p-6">
+                        <h3 class="text-xl font-bold mb-2">Product Packaging</h3>
+                        <p class="text-center mb-4">Designed shelf-worthy packaging that enhanced product value and customer appeal.</p>
+                        <span class="text-yellow-500 font-medium">View Designs →</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="border-2 border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white font-bold py-3 px-8 rounded-lg transition">View More Projects</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-blue-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
+                <p class="text-xl text-blue-200 max-w-3xl mx-auto">Hear from businesses we've helped transform</p>
+                <div class="w-24 h-1 bg-yellow-500 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white text-gray-800 rounded-xl shadow-lg p-8 transition duration-500 hover:bg-blue-800 hover:text-white">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-500 text-2xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="mb-6 italic">"ValorTrust transformed our social media presence completely. In just 3 months, we saw a 400% increase in engagement and a significant boost in sales."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Aisha Abdullahi</h4>
+                            <p class="text-sm">CEO, Nana's Kitchen</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white text-gray-800 rounded-xl shadow-lg p-8 transition duration-500 hover:bg-blue-800 hover:text-white">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-500 text-2xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="mb-6 italic">"Their quantity surveying services saved us over 15% on our construction costs while maintaining quality. Highly recommended for any building project."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Mohammed Kabir</h4>
+                            <p class="text-sm">Manager, Kabir Properties</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white text-gray-800 rounded-xl shadow-lg p-8 transition duration-500 hover:bg-blue-800 hover:text-white">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-500 text-2xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="mb-6 italic">"The 3D product designs created for our kitchenware line helped us secure major retail contracts. Their creative vision is exceptional."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Fatima Yusuf</h4>
+                            <p class="text-sm">Director, Home Essentials</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Latest Insights</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Discover trends, tips and strategies for business growth</p>
+                <div class="w-24 h-1 bg-yellow-500 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Blog Post 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-500 hover:shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1551135021-5a37cdfc5e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80" alt="Social Media Growth" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span class="bg-blue-100 text-blue-900 text-xs font-medium px-2.5 py-0.5 rounded">Digital Marketing</span>
+                            <span class="mx-2">•</span>
+                            <span>July 15, 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-900 mb-2">5 Proven Strategies to Grow Your Social Media Following in Nigeria</h3>
+                        <p class="text-gray-600 mb-4">Discover actionable techniques that helped Nigerian businesses gain thousands of engaged followers organically.</p>
+                        <a href="#" class="text-yellow-500 font-medium hover:text-yellow-600 transition">Read Article →</a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-500 hover:shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Construction Costs" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span class="bg-blue-100 text-blue-900 text-xs font-medium px-2.5 py-0.5 rounded">Construction</span>
+                            <span class="mx-2">•</span>
+                            <span>June 28, 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-900 mb-2">How to Control Construction Costs in Nigeria's Volatile Economy</h3>
+                        <p class="text-gray-600 mb-4">Practical tips for builders and developers to manage budgets effectively despite fluctuating material prices.</p>
+                        <a href="#" class="text-yellow-500 font-medium hover:text-yellow-600 transition">Read Article →</a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-500 hover:shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Product Packaging" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span class="bg-blue-100 text-blue-900 text-xs font-medium px-2.5 py-0.5 rounded">Product Design</span>
+                            <span class="mx-2">•</span>
+                            <span>June 10, 2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-900 mb-2">Designing Product Packaging That Sells on Nigerian Shelves</h3>
+                        <p class="text-gray-600 mb-4">Key elements to consider when creating packaging that attracts Nigerian consumers and boosts sales.</p>
+                        <a href="#" class="text-yellow-500 font-medium hover:text-yellow-600 transition">Read Article →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="#" class="border-2 border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white font-bold py-3 px-8 rounded-lg transition">View All Articles</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="bg-blue-900 rounded-2xl p-8 md:p-12 text-center text-white relative overflow-hidden">
+                <div class="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-yellow-500 opacity-20"></div>
+                <div class="absolute -bottom-20 -left-20 w-64 h-64 rounded-full bg-yellow-500 opacity-20"></div>
+                <div class="relative z-10">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+                    <p class="text-xl text-blue-200 max-w-3xl mx-auto mb-8">Whether you need digital solutions or construction expertise, we're here to help your business reach new heights.</p>
+                    <a href="#contact" class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-4 px-8 rounded-lg transition transform hover:scale-105 inline-block mr-4 mb-4 md:mb-0">Schedule Consultation</a>
+                    <a href="tel:+2348039535043" class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 font-bold py-4 px-8 rounded-lg transition transform hover:scale-105 inline-block">Call Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Get In Touch</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We'd love to hear about your project and discuss how we can help</p>
+                <div class="w-24 h-1 bg-yellow-500 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <form class="bg-white rounded-xl shadow-lg p-8">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-6">Send Us a Message</h3>
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-blue-900 outline-none transition" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-blue-900 outline-none transition" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-blue-900 outline-none transition">
+                        </div>
+                        <div class="mb-6">
+                            <label for="service" class="block text-gray-700 font-medium mb-2">Service Needed</label>
+                            <select id="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-blue-900 outline-none transition">
+                                <option value="">Select a service</option>
+                                <option value="social-media">Social Media Management</option>
+                                <option value="branding">Business Branding</option>
+                                <option value="product-strategy">Product Strategy</option>
+                                <option value="3d-design">3D Object Design</option>
+                                <option value="consulting">Business Consulting</option>
+                                <option value="marketing">Marketing Campaigns</option>
+                                <option value="construction">Building Construction</option>
+                                <option value="real-estate">Real Estate Management</option>
+                                <option value="surveying">Quantity Surveying</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-blue-900 outline-none transition" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-4 px-6 rounded-lg transition transform hover:scale-105">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white rounded-xl shadow-lg p-8 h-full">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-yellow-500 text-xl mt-1 mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Address</h4>
+                                    <p class="text-gray-600">No. 125 Zangon Bare Bari, Kano, Nigeria</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-yellow-500 text-xl mt-1 mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Email</h4>
+                                    <p class="text-gray-600"><a href="mailto:mustaphasanijibrinjikanjaji@gmail.com" class="hover:text-blue-900 transition">mustaphasanijibrinjikanjaji@gmail.com</a></p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-yellow-500 text-xl mt-1 mr-4">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Phone</h4>
+                                    <p class="text-gray-600">
+                                        <a href="tel:+2348039535043" class="hover:text-blue-900 transition block">08039535043</a>
+                                        <a href="tel:+2349076610353" class="hover:text-blue-900 transition block">09076610353</a>
+                                        <a href="tel:+2349095569295" class="hover:text-blue-900 transition block">09095569295</a>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-yellow-500 text-xl mt-1 mr-4">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Business Hours</h4>
+                                    <p class="text-gray-600">Monday - Friday: 8:00 AM - 6:00 PM</p>
+                                    <p class="text-gray-600">Saturday: 10:00 AM - 4:00 PM</p>
+                                </div>
+                            </div>
+                            
+                            <div class="pt-6">
+                                <h4 class="font-bold text-gray-800 mb-4">Connect With Us</h4>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="bg-blue-900 text-white p-3 rounded-full hover:bg-blue-800 transition"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="bg-blue-900 text-white p-3 rounded-full hover:bg-blue-800 transition"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://instagram.com/uniquevalor" class="bg-blue-900 text-white p-3 rounded-full hover:bg-blue-800 transition"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://tiktok.com/@uniquevalor0" class="bg-blue-900 text-white p-3 rounded-full hover:bg-blue-800 transition"><i class="fab fa-tiktok"></i></a>
+                                    <a href="https://wa.me/2348039535043" class="bg-green-500 text-white p-3 rounded-full hover:bg-green-600 transition"><i class="fab fa-whatsapp"></i></a>
+                                    <a href="#" class="bg-blue-900 text-white p-3 rounded-full hover:bg-blue-800 transition"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Map -->
+            <div class="mt-16 bg-white rounded-xl shadow-lg overflow-hidden">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.3719083960127!2d8.51610831533302!3d12.0021367364979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11ae81442e39a71d%3A0x7e54b2a2bb4e4b4a!2sKano%2C%20Nigeria!5e0!3m2!1sen!2sus!4v1690494289593!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Newsletter -->
+    <section class="py-16 bg-blue-900 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Stay Updated</h2>
+            <p class="text-xl text-blue-200 max-w-3xl mx-auto mb-8">Subscribe to our newsletter for business tips, industry insights, and exclusive offers.</p>
+            
+            <form class="max-w-2xl mx-auto flex flex-col sm:flex-row gap-4">
+                <input type="email" placeholder="Your email address" class="flex-grow px-6 py-4 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition text-gray-800">
+                <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-4 px-8 rounded-lg transition transform hover:scale-105">Subscribe</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-blue-950 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <a href="#" class="text-2xl font-bold flex items-center mb-6">
+                        <span class="bg-white text-blue-900 p-2 rounded mr-2">VTC</span>
+                        <span>VALORTRUST</span>
+                    </a>
+                    <p class="mb-4">Empowering businesses and building dreams through innovative solutions in Kano, Nigeria.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-yellow-500 transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-yellow-500 transition"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/uniquevalor" class="hover:text-yellow-500 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="https://tiktok.com/@uniquevalor0" class="hover:text-yellow-500 transition"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/2348039535043" class="hover:text-yellow-500 transition"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-yellow-500 transition">Home</a></li>
+                        <li><a href="#about" class="hover:text-yellow-500 transition">About Us</a></li>
+                        <li><a href="#services" class="hover:text-yellow-500 transition">Services</a></li>
+                        <li><a href="#portfolio" class="hover:text-yellow-500 transition">Portfolio</a></li>
+                        <li><a href="#blog" class="hover:text-yellow-500 transition">Blog</a></li>
+                        <li><a href="#contact" class="hover:text-yellow-500 transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-yellow-500 transition">Social Media Management</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 transition">Business Branding</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 transition">Product Strategy</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 transition">3D Object Design</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 transition">Construction Services</a></li>
+                        <li><a href="#" class="hover:text-yellow-500 transition">Quantity Surveying</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Contact Info</h4>
+                    <address class="not-italic space-y-3">
+                        <p><i class="fas fa-map-marker-alt text-yellow-500 mr-2"></i> No. 125 Zangon Bare Bari, Kano, Nigeria</p>
+                        <p><i class="fas fa-envelope text-yellow-500 mr-2"></i> mustaphasanijibrinjikanjaji@gmail.com</p>
+                        <p><i class="fas fa-phone-alt text-yellow-500 mr-2"></i> 08039535043</p>
+                        <p><i class="fas fa-clock text-yellow-500 mr-2"></i> Mon-Fri: 8AM-6PM</p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue 900 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2023 ValorTrust Solution and Consultant. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-yellow-500 transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-yellow-500 transition">Terms of Service</a>
+                    <a href="#" class="hover:text-yellow-500 transition">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        
+        // Sticky Header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('shadow-xl', 'py-2');
+            } else {
+                header.classList.remove('shadow-xl', 'py-2');
+            }
+        });
+        
+        // Portfolio Filter
+        const filterButtons = document.querySelectorAll('.portfolio-filter');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('bg-blue-900', 'text-white'));
+                // Add active class to clicked button
+                this.classList.add('bg-blue-900', 'text-white');
+                
+                const filterValue = this.getAttribute('data-filter');
+                
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all') {
+                        item.classList.remove('hidden');
+                    } else {
+                        if (item.getAttribute('data-category') === filterValue) {
+                            item.classList.remove('hidden');
+                        } else {
+                            item.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+        });
+        
+        // Initialize ScrollReveal
+        ScrollReveal().reveal('.animate-slogan', { 
+            delay: 200,
+            duration: 1000,
+            distance: '20px',
+            origin: 'bottom'
+        });
+        
+        ScrollReveal().reveal('.service-card', { 
+            delay: 200,
+            duration: 800,
+            interval: 200,
+            distance: '20px',
+            origin: 'bottom'
+        });
+        
+        ScrollReveal().reveal('.testimonial-card', { 
+            delay: 200,
+            duration: 800,
+            interval: 200,
+            distance: '20px',
+            origin: 'bottom'
+        });
+        
+        // Smooth scrolling for all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+        
+        // Form submission
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! We will get back to you soon.');
+                this.reset();
+            });
+        }
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made By: <a href="https://wa.me/2349095569295" style="color: #fff;text-decoration: underline;" target="_blank" >MUSTY-JIKANJAJI</a>
+</html>
